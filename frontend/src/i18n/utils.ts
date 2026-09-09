@@ -6,7 +6,7 @@ export type { SupportedLocale } from './locale-registry'
 
 import type { SupportedLocale } from './locale-registry'
 
-export const FALLBACK_LOCALE: SupportedLocale = 'zh'
+export const FALLBACK_LOCALE: SupportedLocale = 'en'
 export const PREFERRED_LOCALE_STORAGE_KEY = 'preferredLocale'
 export const EMPTY_LOCALE_MESSAGES = Object.fromEntries(
   SUPPORTED_LOCALES.map((supportedLocale) => [supportedLocale, {}]),
@@ -29,8 +29,7 @@ export const resolveSupportedLocale = (locale: string | null | undefined): Suppo
   return null
 }
 
-export const DEFAULT_LOCALE: SupportedLocale = resolveSupportedLocale(APP_CONFIG.DEFAULT_LANG)
-  || FALLBACK_LOCALE
+export const DEFAULT_LOCALE: SupportedLocale = 'en'
 
 export const matchSupportedLocale = (locale: string | null | undefined): SupportedLocale | null => {
   if (!locale) return null
