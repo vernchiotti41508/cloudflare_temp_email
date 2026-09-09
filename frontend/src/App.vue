@@ -21,7 +21,6 @@ const adClient = APP_CONFIG.GOOGLE_AD_CLIENT;
 const adSlot = APP_CONFIG.GOOGLE_AD_SLOT;
 const { locale } = useI18n({ useScope: 'global' });
 const theme = computed(() => isDark.value ? darkTheme : null)
-const theme = computed(() => isDark.value ? darkTheme : null)
 const themeOverrides = {
   common: {
     primaryColor: '#0d9488',
