@@ -21,6 +21,14 @@ const adClient = APP_CONFIG.GOOGLE_AD_CLIENT;
 const adSlot = APP_CONFIG.GOOGLE_AD_SLOT;
 const { locale } = useI18n({ useScope: 'global' });
 const theme = computed(() => isDark.value ? darkTheme : null)
+const themeOverrides = {
+  common: {
+    primaryColor: '#0d9488',
+    primaryColorHover: '#14b8a6',
+    primaryColorPressed: '#0f766e',
+    primaryColorSuppl: '#14b8a6',
+  },
+}
 const localeConfig = computed(() => getNaiveLocaleConfig(isSupportedLocale(locale.value) ? locale.value : DEFAULT_LOCALE))
 const isMobile = useIsMobile()
 const showSideMargin = computed(() => !isMobile.value && useSideMargin.value);
@@ -88,7 +96,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <n-config-provider :locale="localeConfig.locale" :date-locale="localeConfig.dateLocale" :theme="theme">
+  <n-config-provider :locale="localeConfig.locale" :date-locale="localeConfig.dateLocale" :theme="theme" :theme-overrides="themeOverrides">
     <n-global-style />
     <n-spin description="loading..." :show="loading">
       <n-notification-provider container-style="margin-top: 60px;">
