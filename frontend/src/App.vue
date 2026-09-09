@@ -23,10 +23,10 @@ const { locale } = useI18n({ useScope: 'global' });
 const theme = computed(() => isDark.value ? darkTheme : null)
 const themeOverrides = {
   common: {
-    primaryColor: '#3b82f6',
-    primaryColorHover: '#60a5fa',
-    primaryColorPressed: '#2563eb',
-    primaryColorSuppl: '#60a5fa',
+    primaryColor: '#6366f1',
+    primaryColorHover: '#818cf8',
+    primaryColorPressed: '#4f46e5',
+    primaryColorSuppl: '#818cf8',
   },
 }
 const localeConfig = computed(() => getNaiveLocaleConfig(isSupportedLocale(locale.value) ? locale.value : DEFAULT_LOCALE))
