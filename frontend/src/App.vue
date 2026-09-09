@@ -21,12 +21,13 @@ const adClient = APP_CONFIG.GOOGLE_AD_CLIENT;
 const adSlot = APP_CONFIG.GOOGLE_AD_SLOT;
 const { locale } = useI18n({ useScope: 'global' });
 const theme = computed(() => isDark.value ? darkTheme : null)
+const theme = computed(() => isDark.value ? darkTheme : null)
 const themeOverrides = {
   common: {
-    primaryColor: '#6366f1',
-    primaryColorHover: '#818cf8',
-    primaryColorPressed: '#4f46e5',
-    primaryColorSuppl: '#818cf8',
+    primaryColor: '#0d9488',
+    primaryColorHover: '#14b8a6',
+    primaryColorPressed: '#0f766e',
+    primaryColorSuppl: '#14b8a6',
   },
 }
 const localeConfig = computed(() => getNaiveLocaleConfig(isSupportedLocale(locale.value) ? locale.value : DEFAULT_LOCALE))
